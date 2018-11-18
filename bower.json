@@ -3,7 +3,7 @@
   "version": "0.8.8",
   "homepage": "http://mymentech.com",
   "authors": [
-    "Holger Koenemann <office@holgerkoenemann.de>"
+    "Mozammel Haque <mozammel@mymentech.com>"
   ],
   "description": "Mymentech is a Bootstrap and underscores based WordPress theme framework.",
   "moduleType": "globals",
@@ -25,7 +25,7 @@
   ],
   "dependencies": {
   },
-  "_source": "https://github.com/holger1411/mymentech.git",
+  "_source": "https://github.com/mymentech/mymentech.git",
   "_target": "~0.8.8",
   "_originalSource": "mymentech"
 }
