@@ -25,24 +25,29 @@ if ( $max_value && $min_value === $max_value ) {
 	<?php
 } else {
 	/* translators: %s: Quantity. */
-	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'mymentech' ), strip_tags( $args['product_name'] ) ) : '';
+	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'presise' ), strip_tags( $args['product_name'] ) ) : '';
 	?>
-	<div class="quantity">
-		<label class="sr-only" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'mymentech' ); ?></label>
-		<input
-			type="number"
+	<div class="quantity presise-quantity-buttons">
+		<label class="sr-only" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'presise' ); ?></label>
+        <span class="presise-quantity-minus"></span>
+        <input
+			type="text"
 			id="<?php echo esc_attr( $input_id ); ?>"
-			class="input-text qty text"
+			class="input-text qty text presise_input_qty"
 			step="<?php echo esc_attr( $step ); ?>"
+			data-step="<?php echo esc_attr( $step ); ?>"
 			min="<?php echo esc_attr( $min_value ); ?>"
+			data-min="<?php echo esc_attr( $min_value ); ?>"
 			max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
+			data-max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
 			name="<?php echo esc_attr( $input_name ); ?>"
 			value="<?php echo esc_attr( $input_value ); ?>"
-			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'mymentech' ); ?>"
+			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'presise' ); ?>"
 			size="4"
 			pattern="<?php echo esc_attr( $pattern ); ?>"
 			inputmode="<?php echo esc_attr( $inputmode ); ?>"
 			aria-labelledby="<?php echo esc_attr( $labelledby ); ?>" />
+        <span class="presise-quantity-plus"></span>
 	</div>
 	<?php
 }

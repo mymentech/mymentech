@@ -2,7 +2,7 @@
 /**
  * Sidebar - hero setup.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			    
 			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Previous', 'mymentech' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e( 'Previous', 'presise' ); ?></span>
 			 
 			 </a>
 			 
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			    
 			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 			    
-			    <span class="sr-only"><?php esc_html_e( 'Next', 'mymentech' ); ?></span>
+			    <span class="sr-only"><?php esc_html_e( 'Next', 'presise' ); ?></span>
 			  
 			</a>
 

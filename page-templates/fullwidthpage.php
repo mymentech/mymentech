@@ -4,7 +4,7 @@
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container = get_theme_mod( 'mymentech_container_type' );
+$container = get_theme_mod( 'presise_container_type' );
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">

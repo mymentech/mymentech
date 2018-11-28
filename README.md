@@ -1,20 +1,20 @@
-Travis build: [![Build Status](https://travis-ci.org/mymentech/mymentech.svg?branch=master)](https://travis-ci.org/mymentech/mymentech)
+Travis build: [![Build Status](https://travis-ci.org/presise/presise.svg?branch=master)](https://travis-ci.org/presise/presise)
 
-#### See: [Official Demo](https://mymentech.com/mymentech) | Read: [Official Docs Page](https://mymentech.github.io/)
+#### See: [Official Demo](https://presise.biz/presise) | Read: [Official Docs Page](https://presise.github.io/)
 
-# Mymentech WordPress Theme Framework
+# Presise WordPress Theme Framework
 
-Website: [https://mymentech.com](https://mymentech.com)
+Website: [https://presise.biz](https://presise.biz)
 
-Child Theme Project: [https://github.com/mymentech/mymentech-child](https://github.com/mymentech/mymentech-child)
+Child Theme Project: [https://github.com/presise/presise-child](https://github.com/presise/presise-child)
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what Mymentech is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for Mymentech.
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what Presise is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for Presise.
 
 ## License
-Mymentech WordPress Theme, Copyright 2013-2018 Holger Koenemann
-Mymentech is distributed under the terms of the GNU GPL version 2
+Presise WordPress Theme, Copyright 2013-2018 Holger Koenemann
+Presise is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -31,7 +31,7 @@ See [changelog](CHANGELOG.md)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
-- [Child Theme](https://github.com/holger1411/mymentech-child) ready.
+- [Child Theme](https://github.com/holger1411/presise-child) ready.
 - Translation ready.
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
@@ -41,45 +41,45 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 ## Confused by All the CSS and Sass Files?
 
-Some basics about the Sass and CSS files that come with Mymentech:
+Some basics about the Sass and CSS files that come with Presise:
 - The theme itself uses the `/style.css`file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
- ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or Mymentech variables here
+ ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or Presise variables here
  @import "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
- @import "mymentech/mymentech"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
+ @import "presise/presise"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
  @import "../src/fontawesome/scss/font-awesome"; // 4. Font Awesome Icon styles
  // Any additional imported files //
  @import "theme/theme";  // 5. Add your styles into this file
  ```
 
-- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update Mymentech without overwriting your own work!
+- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update Presise without overwriting your own work!
 - Your design goes into: `/sass/theme`. 
   - Add your styles to the `/sass/theme/_theme.scss` file 
   - And your variables to the `/sass/theme/_theme_variables.scss`
   - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
-There are several ways to install Mymentech. We'll look at three of them: (1) classic install by uploading Mymentech to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress. 
+There are several ways to install Presise. We'll look at three of them: (1) classic install by uploading Presise to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress. 
 
 ### Classic install
-- Download the mymentech folder from GitHub or from [https://mymentech.com](https://mymentech.com)
-- IMPORTANT: If you download it from GitHub make sure you rename the "mymentech-master.zip" file just to "mymentech.zip" or you might have problems using child themes!
+- Download the presise folder from GitHub or from [https://presise.biz](https://presise.biz)
+- IMPORTANT: If you download it from GitHub make sure you rename the "presise-master.zip" file just to "presise.zip" or you might have problems using child themes!
 - Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
-- Activate the Mymentech theme
+- Activate the Presise theme
 
 ### npm install
 - Open your terminal
-- Change to the directory where you want to add Mymentech
-- Type `npm install mymentech`
+- Change to the directory where you want to add Presise
+- Type `npm install presise`
 
 ### WordPress.org install
 - Open your WordPress backend
 - Click on "Appearance -> Themes"
 - Hit the "Add new" button
-- Search for "Mymentech"
+- Search for "Presise"
 - Hit the "install" button
 - Activate the theme
 
@@ -87,7 +87,7 @@ There are several ways to install Mymentech. We'll look at three of them: (1) cl
 
 ### Installing Dependencies
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
-- Then open your terminal and browse to the location of your Mymentech copy
+- Then open your terminal and browse to the location of your Presise copy
 - Run: `$ npm install`
 
 ### Running
@@ -121,7 +121,7 @@ Add a new file to the themes root folder called rtl.css. Add all alignments to t
 https://codex.wordpress.org/Right_to_Left_Language_Support
 
 ## Page Templates
-Mymentech includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
+Presise includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
 
 ### Blank Template
 

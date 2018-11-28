@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/",
+    "proxy": "http://presisenewsite.com/",
     "notify": false
   },
   "browserSyncWatchFiles" : [

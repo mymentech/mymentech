@@ -2,7 +2,7 @@
 /**
  * Single post partial template.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="entry-meta">
 
-			<?php mymentech_posted_on(); ?>
+			<?php presise_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'mymentech' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'presise' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php mymentech_entry_footer(); ?>
+		<?php presise_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Mymentech modify editor
+ * Presise modify editor
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -13,19 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Registers an editor stylesheet for the theme.
  */
 
-add_action( 'admin_init', 'mymentech_wpdocs_theme_add_editor_styles' );
+add_action( 'admin_init', 'presise_wpdocs_theme_add_editor_styles' );
 
-if ( ! function_exists ( 'mymentech_wpdocs_theme_add_editor_styles' ) ) {
-  function mymentech_wpdocs_theme_add_editor_styles() {
+if ( ! function_exists ( 'presise_wpdocs_theme_add_editor_styles' ) ) {
+  function presise_wpdocs_theme_add_editor_styles() {
     add_editor_style( 'css/custom-editor-style.min.css' );
   }
 }
 
 // Add TinyMCE style formats.
-add_filter( 'mce_buttons_2', 'mymentech_tiny_mce_style_formats' );
+add_filter( 'mce_buttons_2', 'presise_tiny_mce_style_formats' );
 
-if ( ! function_exists ( 'mymentech_tiny_mce_style_formats' ) ) {
-  function mymentech_tiny_mce_style_formats( $styles ) {
+if ( ! function_exists ( 'presise_tiny_mce_style_formats' ) ) {
+  function presise_tiny_mce_style_formats( $styles ) {
 
       array_unshift( $styles, 'styleselect' );
       return $styles;
@@ -33,10 +33,10 @@ if ( ! function_exists ( 'mymentech_tiny_mce_style_formats' ) ) {
 }
 
 
-add_filter( 'tiny_mce_before_init', 'mymentech_tiny_mce_before_init' );
+add_filter( 'tiny_mce_before_init', 'presise_tiny_mce_before_init' );
 
-if ( ! function_exists ( 'mymentech_tiny_mce_before_init' ) ) {
-  function mymentech_tiny_mce_before_init( $settings ) {
+if ( ! function_exists ( 'presise_tiny_mce_before_init' ) ) {
+  function presise_tiny_mce_before_init( $settings ) {
 
     $style_formats = array(
         array(

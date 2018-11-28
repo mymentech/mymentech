@@ -4,7 +4,7 @@
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-$container   = get_theme_mod( 'mymentech_container_type' );
+$container   = get_theme_mod( 'presise_container_type' );
 ?>
 
 
@@ -34,7 +34,7 @@ $container   = get_theme_mod( 'mymentech_container_type' );
 						$author_name ) : get_userdata( intval( $author ) );
 					?>
 
-					<h1><?php esc_html_e( 'About:', 'mymentech' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+					<h1><?php esc_html_e( 'About:', 'presise' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
 						<?php echo get_avatar( $curauth->ID ); ?>
@@ -42,19 +42,19 @@ $container   = get_theme_mod( 'mymentech_container_type' );
 
 					<dl>
 						<?php if ( ! empty( $curauth->user_url ) ) : ?>
-							<dt><?php esc_html_e( 'Website', 'mymentech' ); ?></dt>
+							<dt><?php esc_html_e( 'Website', 'presise' ); ?></dt>
 							<dd>
 								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 							</dd>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $curauth->user_description ) ) : ?>
-							<dt><?php esc_html_e( 'Profile', 'mymentech' ); ?></dt>
+							<dt><?php esc_html_e( 'Profile', 'presise' ); ?></dt>
 							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 						<?php endif; ?>
 					</dl>
 
-					<h2><?php esc_html_e( 'Posts by', 'mymentech' ); ?> <?php echo esc_html( $curauth->nickname ); ?>
+					<h2><?php esc_html_e( 'Posts by', 'presise' ); ?> <?php echo esc_html( $curauth->nickname ); ?>
 						:</h2>
 
 				</header><!-- .page-header -->
@@ -66,10 +66,10 @@ $container   = get_theme_mod( 'mymentech_container_type' );
 						<?php while ( have_posts() ) : the_post(); ?>
 							<li>
 								<a rel="bookmark" href="<?php the_permalink() ?>"
-								   title="<?php esc_html_e( 'Permanent Link:', 'mymentech' ); ?> <?php the_title(); ?>">
+								   title="<?php esc_html_e( 'Permanent Link:', 'presise' ); ?> <?php the_title(); ?>">
 									<?php the_title(); ?></a>,
-								<?php mymentech_posted_on(); ?> <?php esc_html_e( 'in',
-								'mymentech' ); ?> <?php the_category( '&' ); ?>
+								<?php presise_posted_on(); ?> <?php esc_html_e( 'in',
+								'presise' ); ?> <?php the_category( '&' ); ?>
 							</li>
 						<?php endwhile; ?>
 
@@ -86,7 +86,7 @@ $container   = get_theme_mod( 'mymentech_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php mymentech_pagination(); ?>
+			<?php presise_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

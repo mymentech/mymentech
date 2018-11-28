@@ -2,7 +2,7 @@
 /**
  * Content empty partial template.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

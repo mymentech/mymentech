@@ -4,7 +4,7 @@
  *
  * Template for displaying a blank page.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

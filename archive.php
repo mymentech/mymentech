@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,7 +15,7 @@ get_header();
 ?>
 
 <?php
-$container   = get_theme_mod( 'mymentech_container_type' );
+$container   = get_theme_mod( 'presise_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">
@@ -62,7 +62,7 @@ $container   = get_theme_mod( 'mymentech_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php mymentech_pagination(); ?>
+			<?php presise_pagination(); ?>
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

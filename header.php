@@ -4,14 +4,14 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'mymentech_container_type' );
+$container = get_theme_mod( 'presise_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -33,7 +33,7 @@ $container = get_theme_mod( 'mymentech_container_type' );
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'mymentech' ); ?></a>
+		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'presise' ); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
@@ -59,7 +59,7 @@ $container = get_theme_mod( 'mymentech_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'mymentech' ); ?>">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'presise' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -73,7 +73,7 @@ $container = get_theme_mod( 'mymentech_container_type' );
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
-						'walker'          => new Mymentech_WP_Bootstrap_Navwalker(),
+						'walker'          => new Presise_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 			<?php if ( 'container' == $container ) : ?>

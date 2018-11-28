@@ -2,7 +2,7 @@
 /**
  * Right sidebar check.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
 
-<?php $sidebar_pos = get_theme_mod( 'mymentech_sidebar_position' ); ?>
+<?php $sidebar_pos = get_theme_mod( 'presise_sidebar_position' ); ?>
 
 <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 

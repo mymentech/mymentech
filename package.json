@@ -1,5 +1,5 @@
 {
-  "name": "mymentech",
+  "name": "presise",
   "version": "0.8.8",
   "description": "WordPress Theme framework",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mymentech/mymentech.git"
+    "url": "https://github.com/presise/presise.git"
   },
   "keywords": [
     "wordpress",
@@ -23,9 +23,9 @@
   "author": "Mozammel Haque",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/mymentech/mymentech/issues"
+    "url": "https://github.com/presise/presise/issues"
   },
-  "homepage": "https://www.mymentech.com",
+  "homepage": "https://www.presise.biz",
   "dependencies": {
     "bootstrap": "4.1.3",
     "browser-sync": "^2.23.6",

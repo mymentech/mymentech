@@ -2,22 +2,22 @@
 /**
  * Custom header setup.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_action( 'after_setup_theme', 'mymentech_custom_header_setup' );
+add_action( 'after_setup_theme', 'presise_custom_header_setup' );
 
-if ( ! function_exists ( 'mymentech_custom_header_setup' ) ) {
-	function mymentech_custom_header_setup() {
+if ( ! function_exists ( 'presise_custom_header_setup' ) ) {
+	function presise_custom_header_setup() {
 
 		/**
-		 * Filter Mymentech custom-header support arguments.
+		 * Filter Presise custom-header support arguments.
 		 *
-		 * @since Mymentech 0.5.2
+		 * @since Presise 0.5.2
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -31,7 +31,7 @@ if ( ! function_exists ( 'mymentech_custom_header_setup' ) ) {
 		 *     @type string $flex-height     		Flex support for height of header.
 		 * }
 		 */
-		add_theme_support( 'custom-header', apply_filters( 'mymentech_custom_header_args', array(
+		add_theme_support( 'custom-header', apply_filters( 'presise_custom_header_args', array(
 			'default-image'      => get_parent_theme_file_uri( '/img/header.jpg' ),
 			'width'              => 2000,
 			'height'             => 1200,
@@ -42,7 +42,7 @@ if ( ! function_exists ( 'mymentech_custom_header_setup' ) ) {
 			'default-image' => array(
 				'url'           => '%s/img/header.jpg',
 				'thumbnail_url' => '%s/img/header.jpg',
-				'description'   => __( 'Default Header Image', 'mymentech' ),
+				'description'   => __( 'Default Header Image', 'presise' ),
 			),
 		) );
 	}

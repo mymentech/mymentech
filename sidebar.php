@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

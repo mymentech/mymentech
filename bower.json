@@ -1,11 +1,11 @@
 {
-  "name": "mymentech",
+  "name": "presise",
   "version": "0.8.8",
-  "homepage": "http://mymentech.com",
+  "homepage": "http://presise.biz",
   "authors": [
-    "Mozammel Haque <mozammel@mymentech.com>"
+    "Mozammel Haque <mozammel@presise.biz>"
   ],
-  "description": "Mymentech is a Bootstrap and underscores based WordPress theme framework.",
+  "description": "Presise is a Bootstrap and underscores based WordPress theme framework.",
   "moduleType": "globals",
   "main": [
     "sass/theme.scss"
@@ -25,7 +25,7 @@
   ],
   "dependencies": {
   },
-  "_source": "https://github.com/mymentech/mymentech.git",
+  "_source": "https://github.com/presise/presise.git",
   "_target": "~0.8.8",
-  "_originalSource": "mymentech"
+  "_originalSource": "presise"
 }

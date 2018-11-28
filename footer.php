@@ -4,14 +4,14 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'mymentech_container_type' );
+$container = get_theme_mod( 'presise_container_type' );
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -28,7 +28,7 @@ $container = get_theme_mod( 'mymentech_container_type' );
 
 					<div class="site-info">
 
-						<?php mymentech_site_info(); ?>
+						<?php presise_site_info(); ?>
 
 					</div><!-- .site-info -->
 

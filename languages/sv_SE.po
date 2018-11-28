@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mymentech\n"
+"Project-Id-Version: presise\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
 "POT-Creation-Date: 2016-11-23 20:21+0200\n"
 "PO-Revision-Date: 2017-02-20 13:19+0000\n"
@@ -371,12 +371,12 @@ msgid "Save changes"
 msgstr "Spara ändringar"
 
 #. Name of the theme
-msgid "Mymentech"
-msgstr "Mymentech"
+msgid "Presise"
+msgstr "Presise"
 
 #. Theme URI of the theme
-msgid "http://mymentech.com"
-msgstr "http://mymentech.com"
+msgid "http://presise.biz"
+msgstr "http://presise.biz"
 
 #. Description of the theme
 msgid ""

@@ -2,25 +2,25 @@
 /**
  * Pagination layout.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! function_exists ( 'mymentech_pagination' ) ) {
+if ( ! function_exists ( 'presise_pagination' ) ) {
 
-	function mymentech_pagination( $args = array(), $class = 'pagination' ) {
+	function presise_pagination( $args = array(), $class = 'pagination' ) {
 
         if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 
 		$args = wp_parse_args( $args, array(
 			'mid_size'           => 2,
 			'prev_next'          => true,
-			'prev_text'          => __('&laquo;', 'mymentech'),
-			'next_text'          => __('&raquo;', 'mymentech'),
-			'screen_reader_text' => __('Posts navigation', 'mymentech'),
+			'prev_text'          => __('&laquo;', 'presise'),
+			'next_text'          => __('&raquo;', 'presise'),
+			'screen_reader_text' => __('Posts navigation', 'presise'),
 			'type'               => 'array',
 			'current'            => max( 1, get_query_var('paged') ),
 		) );

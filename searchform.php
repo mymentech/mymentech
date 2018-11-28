@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms in Underscores.me
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-	<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'mymentech' ); ?></label>
+	<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'presise' ); ?></label>
 	<div class="input-group">
 		<input class="field form-control" id="s" name="s" type="text"
-			placeholder="<?php esc_attr_e( 'Search &hellip;', 'mymentech' ); ?>" value="<?php the_search_query(); ?>">
+			placeholder="<?php esc_attr_e( 'Search &hellip;', 'presise' ); ?>" value="<?php the_search_query(); ?>">
 		<span class="input-group-append">
 			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
-			value="<?php esc_attr_e( 'Search', 'mymentech' ); ?>">
+			value="<?php esc_attr_e( 'Search', 'presise' ); ?>">
 	</span>
 	</div>
 </form>

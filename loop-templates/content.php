@@ -2,7 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 			<div class="entry-meta">
-				<?php mymentech_posted_on(); ?>
+				<?php presise_posted_on(); ?>
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'mymentech' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'presise' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php mymentech_entry_footer(); ?>
+		<?php presise_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 

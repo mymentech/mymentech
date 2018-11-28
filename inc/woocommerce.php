@@ -2,19 +2,19 @@
 /**
  * Add WooCommerce support
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_action( 'after_setup_theme', 'mymentech_woocommerce_support' );
-if ( ! function_exists( 'mymentech_woocommerce_support' ) ) {
+add_action( 'after_setup_theme', 'presise_woocommerce_support' );
+if ( ! function_exists( 'presise_woocommerce_support' ) ) {
 	/**
 	 * Declares WooCommerce theme support.
 	 */
-	function mymentech_woocommerce_support() {
+	function presise_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 
 		// Add New Woocommerce 3.0.0 Product Gallery support
@@ -23,7 +23,7 @@ if ( ! function_exists( 'mymentech_woocommerce_support' ) ) {
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// hook in and customizer form fields.
-		add_filter( 'woocommerce_form_field_args', 'mymentech_wc_form_field_args', 10, 3 );
+		add_filter( 'woocommerce_form_field_args', 'presise_wc_form_field_args', 10, 3 );
 	}
 }
 
@@ -36,11 +36,11 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 /**
 * Then hook in your own functions to display the wrappers your theme requires
 */
-add_action('woocommerce_before_main_content', 'mymentech_woocommerce_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'mymentech_woocommerce_wrapper_end', 10);
-if ( ! function_exists( 'mymentech_woocommerce_wrapper_start' ) ) {
-	function mymentech_woocommerce_wrapper_start() {
-		$container   = get_theme_mod( 'mymentech_container_type' );
+add_action('woocommerce_before_main_content', 'presise_woocommerce_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'presise_woocommerce_wrapper_end', 10);
+if ( ! function_exists( 'presise_woocommerce_wrapper_start' ) ) {
+	function presise_woocommerce_wrapper_start() {
+		$container   = get_theme_mod( 'presise_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
@@ -48,8 +48,8 @@ if ( ! function_exists( 'mymentech_woocommerce_wrapper_start' ) ) {
 		echo '<main class="site-main" id="main">';
 	}
 }
-if ( ! function_exists( 'mymentech_woocommerce_wrapper_end' ) ) {
-function mymentech_woocommerce_wrapper_end() {
+if ( ! function_exists( 'presise_woocommerce_wrapper_end' ) ) {
+function presise_woocommerce_wrapper_end() {
 	echo '</main><!-- #main -->';
 	get_template_part( 'global-templates/right-sidebar-check' );
   echo '</div><!-- .row -->';
@@ -69,8 +69,8 @@ function mymentech_woocommerce_wrapper_end() {
  *
  * @return mixed
  */
-if ( ! function_exists ( 'mymentech_wc_form_field_args' ) ) {
-	function mymentech_wc_form_field_args( $args, $key, $value = null ) {
+if ( ! function_exists ( 'presise_wc_form_field_args' ) ) {
+	function presise_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			/* Targets all select input type elements, except the country and state select input types */

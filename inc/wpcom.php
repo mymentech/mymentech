@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,10 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @global array $themecolors
  */
-add_action( 'after_setup_theme', 'mymentech_wpcom_setup' );
+add_action( 'after_setup_theme', 'presise_wpcom_setup' );
 
-if ( ! function_exists ( 'mymentech_wpcom_setup' ) ) {
-	function mymentech_wpcom_setup() {
+if ( ! function_exists ( 'presise_wpcom_setup' ) ) {
+	function presise_wpcom_setup() {
 		global $themecolors;
 
 		// Set theme colors for third party services.
@@ -42,10 +42,10 @@ if ( ! function_exists ( 'mymentech_wpcom_setup' ) ) {
 /*
  * WordPress.com-specific styles
  */
-add_action( 'wp_enqueue_scripts', 'mymentech_wpcom_styles' );
+add_action( 'wp_enqueue_scripts', 'presise_wpcom_styles' );
 
-if ( ! function_exists ( 'mymentech_wpcom_styles' ) ) {
-	function mymentech_wpcom_styles() {
-		wp_enqueue_style( 'mymentech-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', array(), '20160411' );
+if ( ! function_exists ( 'presise_wpcom_styles' ) ) {
+	function presise_wpcom_styles() {
+		wp_enqueue_style( 'presise-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', array(), '20160411' );
 	}
 }

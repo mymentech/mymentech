@@ -2,14 +2,14 @@
 /**
  * Sidebar setup for footer full.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$container = get_theme_mod( 'mymentech_container_type' );
+$container = get_theme_mod( 'presise_container_type' );
 
 ?>
 

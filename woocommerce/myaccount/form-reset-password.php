@@ -21,14 +21,14 @@ defined( 'ABSPATH' ) || exit;
 
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
-	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Enter a new password below.', 'mymentech' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
+	<p><?php echo apply_filters( 'woocommerce_reset_password_message', esc_html__( 'Enter a new password below.', 'presise' ) ); ?></p><?php // @codingStandardsIgnoreLine ?>
 
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<label for="password_1"><?php esc_html_e( 'New password', 'mymentech' ); ?>&nbsp;<span class="required">*</span></label>
+		<label for="password_1"><?php esc_html_e( 'New password', 'presise' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_1" id="password_1" autocomplete="new-password" />
 	</p>
 	<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-		<label for="password_2"><?php esc_html_e( 'Re-enter new password', 'mymentech' ); ?>&nbsp;<span class="required">*</span></label>
+		<label for="password_2"><?php esc_html_e( 'Re-enter new password', 'presise' ); ?>&nbsp;<span class="required">*</span></label>
 		<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_2" id="password_2" autocomplete="new-password" />
 	</p>
 
@@ -41,7 +41,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<p class="woocommerce-form-row form-row">
 		<input type="hidden" name="wc_reset_password" value="true" />
-		<button type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'mymentech' ); ?>"><?php esc_html_e( 'Save', 'mymentech' ); ?></button>
+		<button type="submit" class="btn btn-outline-primary" value="<?php esc_attr_e( 'Save', 'presise' ); ?>"><?php esc_html_e( 'Save', 'presise' ); ?></button>
 	</p>
 
 	<?php wp_nonce_field( 'reset_password', 'woocommerce-reset-password-nonce' ); ?>

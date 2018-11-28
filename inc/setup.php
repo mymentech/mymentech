@@ -2,7 +2,7 @@
 /**
  * Theme basic setup.
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,9 +14,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'mymentech_setup' );
+add_action( 'after_setup_theme', 'presise_setup' );
 
-if ( ! function_exists ( 'mymentech_setup' ) ) {
+if ( ! function_exists ( 'presise_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -24,14 +24,14 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function mymentech_setup() {
+	function presise_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on mymentech, use a find and replace
-		 * to change 'mymentech' to the name of your theme in all the template files
+		 * If you're building a theme based on presise, use a find and replace
+		 * to change 'presise' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'mymentech', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'presise', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'mymentech' ),
+			'primary' => __( 'Primary Menu', 'presise' ),
 		) );
 
 		/*
@@ -66,6 +66,13 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
+		//define thumbnail sizes
+		add_image_size( 'presise_image_square', 650, 650, true );
+		add_image_size( 'presise_image_catalog', 650, 800, true );
+		add_image_size( 'presise_image_landscape', 1300, 650, true );
+		add_image_size( 'presise_image_portrait', 650, 1300, true );
+		add_image_size( 'presise_image_huge', 1300, 1300, true );
+
 		/*
 		 * Adding support for Widget edit icons in customizer
 		 */
@@ -75,6 +82,7 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 		 * Enable support for Post Formats.
 		 * See http://codex.wordpress.org/Post_Formats
 		 */
+
 		add_theme_support( 'post-formats', array(
 			'aside',
 			'image',
@@ -84,7 +92,7 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'mymentech_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'presise_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -93,15 +101,15 @@ if ( ! function_exists ( 'mymentech_setup' ) ) {
 		add_theme_support( 'custom-logo' );
 
 		// Check and setup theme default settings.
-		mymentech_setup_theme_default_settings();
+		presise_setup_theme_default_settings();
 
 	}
 }
 
 
-add_filter( 'excerpt_more', 'mymentech_custom_excerpt_more' );
+add_filter( 'excerpt_more', 'presise_custom_excerpt_more' );
 
-if ( ! function_exists( 'mymentech_custom_excerpt_more' ) ) {
+if ( ! function_exists( 'presise_custom_excerpt_more' ) ) {
 	/**
 	 * Removes the ... from the excerpt read more link
 	 *
@@ -109,7 +117,7 @@ if ( ! function_exists( 'mymentech_custom_excerpt_more' ) ) {
 	 *
 	 * @return string
 	 */
-	function mymentech_custom_excerpt_more( $more ) {
+	function presise_custom_excerpt_more( $more ) {
 		if ( ! is_admin() ) {
 			$more = '';
 		}
@@ -117,9 +125,9 @@ if ( ! function_exists( 'mymentech_custom_excerpt_more' ) ) {
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'mymentech_all_excerpts_get_more_link' );
+add_filter( 'wp_trim_excerpt', 'presise_all_excerpts_get_more_link' );
 
-if ( ! function_exists( 'mymentech_all_excerpts_get_more_link' ) ) {
+if ( ! function_exists( 'presise_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
 	 *
@@ -127,10 +135,10 @@ if ( ! function_exists( 'mymentech_all_excerpts_get_more_link' ) ) {
 	 *
 	 * @return string
 	 */
-	function mymentech_all_excerpts_get_more_link( $post_excerpt ) {
+	function presise_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary mymentech-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
-			'mymentech' ) . '</a></p>';
+			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary presise-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Read More...',
+			'presise' ) . '</a></p>';
 		}
 		return $post_excerpt;
 	}

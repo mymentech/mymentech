@@ -1,15 +1,15 @@
 <?php
 /**
- * Mymentech functions and definitions
+ * Presise functions and definitions
  *
- * @package mymentech
+ * @package presise
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$mymentech_includes = array(
+$presise_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
@@ -23,10 +23,11 @@ $mymentech_includes = array(
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker.
 	'/woocommerce.php',                     // Load WooCommerce functions.
+	'/woocommerce-config.php',              // Load WooCommerce configuration/hooks.
 	'/editor.php',                          // Load Editor functions.
 );
 
-foreach ( $mymentech_includes as $file ) {
+foreach ( $presise_includes as $file ) {
 	$filepath = locate_template( '/inc' . $file );
 	if ( ! $filepath ) {
 		trigger_error( sprintf( 'Error locating /inc%s for inclusion', $file ), E_USER_ERROR );
